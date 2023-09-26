@@ -108,7 +108,7 @@ print("b2 = " + str(parameters["b2"]))
 initialize_parameters_test(initialize_parameters)
 print('------------------------------------')
 
-#EXERCISE4
+#EXERCISE 4
 # GRADED FUNCTION:forward_propagation
 def forward_propagation(X, parameters):
     """
@@ -398,7 +398,7 @@ print('Excercise 8')
 nn_model_test(nn_model)
 print('------------------------------------')
 
-#EXCERCISE9
+#EXCERCISE 9
 # GRADED FUNCTION: predict
 
 def predict(parameters, X):
