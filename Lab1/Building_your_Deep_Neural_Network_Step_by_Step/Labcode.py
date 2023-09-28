@@ -1,6 +1,7 @@
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
+import copy
 from testCases import *
 from dnn_utils import sigmoid, sigmoid_backward, relu, relu_backward
 from public_tests import *
@@ -416,8 +417,7 @@ def L_model_backward(AL, Y, caches):
     # grads["db" + str(L)] = ...
     # YOUR CODE STARTS HERE
     current_cache = caches[-1]
-    grads["dA" + str(L)], grads["dW" + str(L)], grads["db" + str(L)] = linear_activation_backward(dAL, current_cache, activation="sigmoid")
-    
+    grads["dA" + str(L-1)], grads["dW" + str(L)], grads["db" + str(L)] = linear_activation_backward(dAL, current_cache, activation="sigmoid")
     # YOUR CODE ENDS HERE
     
     # Loop from l=L-2 to l=0
@@ -431,17 +431,18 @@ def L_model_backward(AL, Y, caches):
         # grads["dW" + str(l + 1)] = ...
         # grads["db" + str(l + 1)] = ...
         # YOUR CODE STARTS HERE
-        current_cache = caches[l]
-        dA_prev_temp, dW_temp, db_temp = linear_activation_backward(grads['dA' + str(l + 1)], current_cache, activation = "relu")
-        grads["dA" + str(l)] = dA_prev_temp
-        grads["dW" + str(l + 1)] = dW_temp
-        grads["db" + str(l + 1)] = db_temp        
+        for l in reversed(range(L-1)):
+            current_cache = caches[l]
+            dA_prev_temp, dW_temp, db_temp = linear_activation_backward(grads["dA"+str(l+1)], current_cache,'relu')
+            grads["dA" + str(l)] = dA_prev_temp
+            grads["dW" + str(l + 1)] = dW_temp
+            grads["db" + str(l + 1)] = db_temp      
         # YOUR CODE ENDS HERE
 
     return grads
 t_AL, t_Y_assess, t_caches = L_model_backward_test_case()
 grads = L_model_backward(t_AL, t_Y_assess, t_caches)
-
+print('Exercise 9')
 print("dA0 = " + str(grads['dA0']))
 print("dA1 = " + str(grads['dA1']))
 print("dW1 = " + str(grads['dW1']))
