@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat page for doctor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <p class = "page_title">Converstation with Patient</p>
+        <div id = "wrapper">
+            <div>
+                <div id ="chat_section">
+                </div>
+            </div>
+            <section class="input_section">
+                <section>
+                    <input tabindex=0 type= "text" id="user_input">
+                    <button onclick= "pushUserInput()" type = "submit"><i class="fa fa-arrow-circle-right fa-xl" aria-hidden="true"></i></button>
+                    </button>
+                </section>
+                <button onclick = "processModel()" type ="button" id = "progress">Process</button>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

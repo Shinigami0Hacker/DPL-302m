@@ -1,0 +1,51 @@
+
+body, html{
+    margin: 0;
+}
+#wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 3px red;
+    width: 500px;
+    border-radius: 5px;
+    padding: 10px;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#chat_section{
+    width: 500px;
+    display: flex;
+    float: right;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 500px;
+    overflow-y: scroll;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+#user_input{
+    width: 400px;
+    padding: 5px;
+    font-size: 17px;
+}
+#progress{
+    margin-top: 10px;
+    float: right;
+}
+#post_chat{
+    font-size: 17px;
+    display: block;
+    color: black;
+    padding: 5px;
+    background-color: #D3D3D3;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
