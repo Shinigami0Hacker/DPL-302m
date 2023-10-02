@@ -25,6 +25,13 @@
                 <button onclick = "processModel()" type ="button" id = "progress">Process</button>
             </section>
         </div>
+        <div>
+            <button id="startButton" onclick="startCamera()">Start Camera</button>
+            <button id="stopButton" onclick="stopCamera()">Stop Camera</button>
+            <video id="camera" autoplay></video>
+            
+            <script src="./cameraHandling.js"></script>
+        </div>
     </main>
 </body>
 </html>
