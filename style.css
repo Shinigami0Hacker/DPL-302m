@@ -49,3 +49,14 @@ p{
     border-radius: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+#work_section{
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+}
+#camera{
+    width: 350px;
+    height: 350px;
+    padding: 5px;
+    border: 2px solid orange;
+}

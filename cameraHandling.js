@@ -1,8 +1,7 @@
 const videoElement = document.getElementById("camera");
-const startButton = document.getElementById("startButton");
-const stopButton = document.getElementById("stopButton");
 
 let stream;
+
 async function startCamera() {
     try {
         stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -12,7 +11,7 @@ async function startCamera() {
     }
 }
 
-function stopCamera() {
+stopCamera = () => {
     if (stream) {
         const tracks = stream.getTracks();
         tracks.forEach((track) => {
@@ -22,5 +21,7 @@ function stopCamera() {
     }
 }
 
-startButton.addEventListener("click", startCamera);
-stopButton.addEventListener("click", stopCamera);
+storeVideo = () => {
+    return
+}
+
