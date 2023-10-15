@@ -16,7 +16,7 @@ const LoginContent = () => {
 
     return (
         <div className="flex justify-center items-center h-screen bg-indigo-600">
-            <div className="w-96 h-1/2 p-6 shadow-lg bg-white rounded-lg min-h-min">
+            <div className="w-96 p-6 shadow-lg bg-white rounded-lg min-h-min">
                 <h1 className=" text-2xl font-bold text-center font-mono">Login</h1>
                 <hr className="mt-3 w-f h-1 mx-auto my-4 bg-gray-600 border-0 rounded  dark:bg-gray-700"/>
                 <form action="">
