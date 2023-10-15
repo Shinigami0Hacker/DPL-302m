@@ -2,18 +2,29 @@ import { useEffect, useRef, useState } from "react"
 import { faArrowAltCircleRight, faCamera, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Webcam from "react-webcam"
+import AuthContext from "../context/AuthContext"
 
 const ChatPageContent = () => {
     const [message, setMessage] = useState('')
     const [textBox, setTextBox] = useState([])
     const [openVideo, setOpenVideo] = useState(false)
 
+    const { user } = AuthContext()
+
     const webRef = useRef(null)
+
+    const handleRecieve = async (e) => {
+
+    }
 
     const handleSend = (e) => {
         e.preventDefault()
+
+        const date_obj = new Date;
+
+        const time_string = `${date_obj.getHours}:${date_obj.getMinutes}:${date_obj.getSeconds()}`
         if (message !== ''){
-            setTextBox([...textBox, message])
+            setTextBox([...textBox, {message: message, role: user.role, time_stamp: time_string}])
         }
         setMessage('')
     }
