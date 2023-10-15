@@ -5,6 +5,10 @@ import Webcam from "react-webcam"
 import AuthContext from "../context/AuthContext"
 
 const ChatPageContent = () => {
+    useEffect((e) => {
+
+    }, [])
+
     const [message, setMessage] = useState('')
     const [textBox, setTextBox] = useState([])
     const [openVideo, setOpenVideo] = useState(false)
