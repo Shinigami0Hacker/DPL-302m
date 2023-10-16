@@ -21,7 +21,7 @@ const LoginContent = () => {
                 <hr className="mt-3 w-f h-1 mx-auto my-4 bg-gray-600 border-0 rounded  dark:bg-gray-700"/>
                 <form action="">
                     <div className="">
-                        <label htmlFor="username" className="block mt-4 text-lg">Username</label>
+                        <label htmlFor="username" className="block mt-4 text-lg">Email</label>
                         <input autoComplete="off" tabIndex="1" type="text" name="username" id="username" className="mt-1 w-full h-8 p-2 border border-indigo-600"/> <br />
                         <label htmlFor="password" className="block mt-4 text-lg">Password</label>
                         <input tabIndex="1" type="password" name="password" id="password" className="mt-1 w-full h-8 p-2 border border-indigo-600"/> <br />

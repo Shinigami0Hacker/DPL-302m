@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react"
 import { faArrowAltCircleRight, faCamera, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Webcam from "react-webcam"
-import AuthContext from "../context/AuthContext"
 
 const ChatPageContent = () => {
     useEffect((e) => {
@@ -13,12 +12,14 @@ const ChatPageContent = () => {
     const [textBox, setTextBox] = useState([])
     const [openVideo, setOpenVideo] = useState(false)
 
-    const { user } = AuthContext()
-
     const webRef = useRef(null)
 
     const handleRecieve = async (e) => {
 
+    }
+    
+    let user = {
+        role: "Doctor"
     }
 
     const handleSend = (e) => {
@@ -41,7 +42,7 @@ const ChatPageContent = () => {
         <div className="bg-indigo-600 flex h-screen items-center justify-center relative">
             {openVideo ? 
             <section className="p-8 bg-slate-400 rounded-lg">
-                <FontAwesomeIcon onClick= {closeVideoModal} icon={faXmark} className=""/>
+                <FontAwesomeIcon onClick= {closeVideoModal} icon={faXmark}/>
                 <Webcam ref = {webRef}/>
             </section>:
             <></>}
