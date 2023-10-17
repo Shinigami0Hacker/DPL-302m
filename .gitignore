@@ -1,0 +1,10 @@
+Lab4/.venv
+Lab4/primary_src/W2A1/models/
+Lab4/primary_src/W2A2/dataset/
+Lab4/primary_src/W2A2/images/
+Lab4/primary_src/W3A1/model_data/
+Lab4/primary_src/W3A1/images/
+Lab4/primary_src/W3A1/nb_images/
+Lab4/primary_src/W3A2/data/
+Lab4/primary_src/W3A2/images/
+Lab4/primary_src/W2A1/resnet50.h5
