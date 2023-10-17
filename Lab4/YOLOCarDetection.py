@@ -291,6 +291,16 @@ class YOLOCarDection:
         # maximum number of boxes set to max_boxes and a threshold of iou_threshold (≈1 line)
         scores, boxes, classes = YOLOCarDection.yolo_non_max_suppression(scores, boxes, classes, max_boxes, iou_threshold)
 
+    @staticmethod
+    def load_pretrained_model():
+        global class_names, anchors, model_image_size, yolo_model
+        class_names = read_classes("model_data/coco_classes.txt")
+        anchors = read_anchors("model_data/yolo_anchors.txt")
+        model_image_size = (608, 608) # Same as yolo_model input layer size
+        yolo_model = load_model("model_data/", compile=False)
+        print(yolo_model.summary())
+    
+    @staticmethod
     def predict(image_file):
         """
         Runs the graph to predict boxes for "image_file". Prints and plots the predictions.
@@ -334,12 +344,13 @@ class YOLOCarDection:
 
 def main():
     content = [
-        "Yolo Filter Boxes()",
+        "Yolo Filter Boxes",
         "IOU algorithm",
         "Non-max suppression",
         "Yolo evaluation",
         "Loading pretrain_model",
-        "Predict of testing image"
+        "Predict of testing image",
+        "Exit"
     ]
     menu = Menu(content)
     while True:
@@ -360,7 +371,7 @@ def main():
         elif choice == 4:
             YOLOCarDection.run_test_exercise4()
         elif choice == 5:
-            pass
+            YOLOCarDection.load_pretrained_model()
         elif choice == 6:
             out_scores, out_boxes, out_classes = YOLOCarDection.predict("test.jpg")
         elif choice == 7:
