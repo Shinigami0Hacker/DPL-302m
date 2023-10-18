@@ -22,6 +22,11 @@ const ChatPageContent = () => {
         role: "Doctor"
     }
 
+    const handleCreateRoom = (e) => {
+        e.preventDefault()
+
+    }
+
     const handleSend = (e) => {
         e.preventDefault()
 

@@ -1,3 +1,44 @@
 .modal_background{
     background: rgba(0, 0, 0, 0.5);
 }
+.room_console_modal{
+    width: 550px;
+    height: 300px;
+    position: absolute;
+    background-color: aliceblue;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 10px;
+}
+.room_console_title{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4287f5;
+    font-weight: bold;
+}
+.room_console_btn{
+    margin: 0 auto 0 auto;
+}
+.room_console_selection{
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto 0 auto;
+}
+
+.onl{
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: green;
+}
+
+.offline{
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: red;
+}
