@@ -1,0 +1,14 @@
+.recipient{
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: blueviolet;
+    text-align: center;
+}
+.chat_section{
+    height: 500px;
+    border: 2px solid rgb(79, 70, 229);
+}
+input:focus{
+    border: none;
+}

@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import RoomConsoleModal from "../components/modal/RoomConsoleModal";
-import { createContext } from "react";
 
 const cx = classNames.bind(styles)
 

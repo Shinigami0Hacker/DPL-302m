@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react"
-
-
+import React from "react"
+import AuthContext from "../context/AuthContext"
 
 const LoginContent = () => {
+
+    let {user, handleLogin} = React.useContext(AuthContext)
+
     let [username, setUsername] = useState()
     let [password, setPassword] = useState()
-
-    useEffect(() => {
-        
-    })
-
+    
     const handleSubmit = (e) => {
         e.preventDefault()
     }
-
     return (
         <div className="flex justify-center items-center h-screen bg-indigo-600">
             <div className="w-96 p-6 shadow-lg bg-white rounded-lg min-h-min">
@@ -32,8 +30,7 @@ const LoginContent = () => {
                             </section>
                             <a className="block basis-1/2" href="">Forgot your password?</a>
                         </section>
-
-                        <button onClick={handleSubmit} className="block mt-5 bg-slate-600 w-full font-bold text-[#F0F8FF] rounded-lg h-10 cursor-pointer">Login</button>
+                        <button type="submit" onClick={handleLogin} className="block mt-5 bg-slate-600 w-full font-bold text-[#F0F8FF] rounded-lg h-10 cursor-pointer">Login</button>
                         <p className="text-center mt-4 text-xs">Version 1.0</p>
                     </div>
                 </form>
