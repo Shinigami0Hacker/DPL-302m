@@ -56,8 +56,7 @@ const ChatPageContent = () => {
                                         {box.message}
                                     </div>
                                 </div>
-                            )
-                        })}
+                            )})}
                     </section>
                     <section className="flex mt-5 items-center justify-center">
                         <input value = {message} onChange={(event) => setMessage(event.target.value)} className="h-8 w-5/6 p-2 mr-4 border border-indigo-600 rounded-md hover:none" type="text"/>

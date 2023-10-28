@@ -2,8 +2,7 @@ import { useEffect, useState } from "react"
 import React from "react"
 import AuthContext from "../context/AuthContext"
 
-const LoginContent = () => {
-
+const LoginContent = () => {    
     let {user, handleLogin} = React.useContext(AuthContext)
 
     let [username, setUsername] = useState()
@@ -12,6 +11,7 @@ const LoginContent = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
     }
+    
     return (
         <div className="flex justify-center items-center h-screen bg-indigo-600">
             <div className="w-96 p-6 shadow-lg bg-white rounded-lg min-h-min">
