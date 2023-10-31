@@ -151,8 +151,7 @@ class NeuralMachineTranslation:
         assert len(model.outputs) == 10, f"Wrong output shape. Expected 10 != {len(model.outputs)}"
 
         comparator(summary(model), expected_summary)
-        
-
+     
 def final_test():
     model = modelf(Tx, Ty, n_a, n_s, len(human_vocab), len(machine_vocab))
     print(model.summary())
